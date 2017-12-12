@@ -1,4 +1,4 @@
-import API from '../../api'
+import API from './../api'
 import {
   APP_LOADING,
   APP_DONE_LOADING,
