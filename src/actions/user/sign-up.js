@@ -1,4 +1,4 @@
-import API from './../api'
+import API from '../../api/client'
 import {
   APP_LOADING,
   APP_DONE_LOADING,
@@ -15,7 +15,7 @@ export default (user) => {
   return (dispatch) => {
     dispatch({ type: APP_LOADING })
 
-    // Use api to sign up (create user) here!
+    api.post('/users', user)
       .then((result) => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })
